@@ -1,7 +1,7 @@
 package com.jones.produits.service;
 
 import java.util.List;
-
+import com.jones.produits.models.Categorie;
 import com.jones.produits.models.Produit;
 
 public interface ProduitService {
@@ -11,4 +11,11 @@ public interface ProduitService {
 	 void deleteProduitById(Long id);
 	Produit getProduit(Long id);
 	List<Produit> getAllProduits();
+	List<Produit> findByNomProduit(String nom);
+	List<Produit> findByNomProduitContains(String nom);
+	List<Produit> findByNomPrix (String nom, Double prix);
+	List<Produit> findByCategorie(Categorie categorie);
+	List<Produit> findByCategorieIdCat(Long id);
+	List<Produit> findByOrderByNomProduitAsc();
+	List<Produit> trierProduitsNomPrix();
 }

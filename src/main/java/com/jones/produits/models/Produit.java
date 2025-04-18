@@ -9,7 +9,7 @@ import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+import lombok.ToString;
 
 @Entity
 @Data
@@ -25,12 +25,7 @@ public class Produit {
 	private Date dateCreation;
 	
 	@ManyToOne 
+	@ToString.Exclude 
 	private Categorie categorie;
 
-	public Produit(String nomProduit, Double prixProduit, Date dateCreation) {
-		super();
-		this.nomProduit = nomProduit;
-		this.prixProduit = prixProduit;
-		this.dateCreation = dateCreation;
-	}
 }

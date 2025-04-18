@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import lombok.Data;
+import lombok.ToString;
 
 @Entity
 @Data
@@ -19,10 +20,9 @@ public class Categorie {
 	
 	private String descriptionCat;
 	
-	@OneToMany (mappedBy = "categorie")
+	@OneToMany(mappedBy = "categorie")
+	@ToString.Exclude
 	private List<Produit> produits;
-	
-	public Categorie() {
-		super();
-	}
+
+
 }
