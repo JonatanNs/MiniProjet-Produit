@@ -1,6 +1,8 @@
 package com.jones.produits.service;
 
 import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.jones.produits.models.Categorie;
 import com.jones.produits.models.Produit;
@@ -8,7 +10,8 @@ import com.jones.produits.repository.ProduitRepository;
 
 @Service
 public class ProduitServiceImpl implements ProduitService{
-
+	
+	@Autowired
 	private ProduitRepository produitRepository;
 	
 	@Override

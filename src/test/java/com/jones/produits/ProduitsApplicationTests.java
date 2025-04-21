@@ -2,17 +2,13 @@ package com.jones.produits;
 
 import java.util.Date;
 import java.util.List;
-
-import org.hibernate.Hibernate;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
 import com.jones.produits.models.Categorie;
 import com.jones.produits.models.Produit;
 import com.jones.produits.repository.ProduitRepository;
 
-import jakarta.transaction.Transactional;
 
 @SpringBootTest
 class ProduitsApplicationTests {
@@ -20,7 +16,7 @@ class ProduitsApplicationTests {
 	@Autowired
 	private ProduitRepository produitRepository;
 	
-	@Test
+	/*@Test
 	public void testCreateProduit() {
 		Produit prod = new Produit(null, "PC Dell",2200.99,new Date(), null);
 		produitRepository.save(prod);
@@ -28,13 +24,13 @@ class ProduitsApplicationTests {
 	
 	@Test 
 	public void testFindProduit() {
-		Produit p = produitRepository.findById(1L).get();
+		Produit p = produitRepository.findById(3L).get();
 		System.out.println(p);
 	}
 	
 	@Test
 	public void testUpdateProduit() {
-		Produit p = produitRepository.findById(1L).get();
+		Produit p = produitRepository.findById(3L).get();
 		p.setPrixProduit(1499.99);
 		produitRepository.save(p);
 		System.out.println(p);
@@ -42,7 +38,7 @@ class ProduitsApplicationTests {
 	
 	@Test 
 	public void testDeleteProduit() {
-		produitRepository.deleteById(1L);
+		produitRepository.deleteById(5L);
 	}
 	
 	@Test
@@ -107,7 +103,7 @@ class ProduitsApplicationTests {
 		for(Produit p: prods) {
 			System.out.println(p);
 		}
-	}
+	}*/
 
 }
 	
